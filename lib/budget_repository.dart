@@ -2,7 +2,7 @@
  * @Author: clingxin
  * @Date: 2021-06-15 17:32:28
  * @LastEditors: clingxin
- * @LastEditTime: 2021-06-15 17:48:52
+ * @LastEditTime: 2021-06-15 18:11:33
  * @FilePath: /flutter_notion/lib/budget_repository.dart
  */
 
@@ -25,7 +25,7 @@ class BudgetRepository {
     _client.close();
   }
 
-  Future<List<Item>?> getItems() async {
+  Future<List<Item>> getItems() async {
     try {
       final url =
           '${_baseUrl}databases/${dotenv.env['NOTION_DATABASE_ID']}/query';
